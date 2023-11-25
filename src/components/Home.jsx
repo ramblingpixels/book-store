@@ -5,15 +5,15 @@ import { Image } from "semantic-ui-react";
 const Home = () => {
 	const featuredBooks = [
 		{
-			image: "../../public/images/alchemist.jpeg",
-			title: "The Alchemist",
-			author: "Paulo Coelho",
-			description: `The Alchemist is a philosophical novel by Paulo Coelho that follows the journey of a shepherd named Santiago as he embarks on a quest for personal legend and discovers the transformative power of following one's dreams.`,
+			image: "https://images.gr-assets.com/books/1447303603l/2767052.jpg",
+			title: "The Hunger Games",
+			author: "Suzanne Collins",
+			description: `"The Hunger Games" by Suzanne Collins is a dystopian novel that follows the story of Katniss Everdeen as she navigates a televised fight to the death in a post-apocalyptic world, exploring themes of survival, sacrifice, and rebellion.`,
 			price: "₹195",
 			index: "1",
 		},
 		{
-			image: "../../public/images/kiterunner.jpg",
+			image: "https://images.gr-assets.com/books/1345958969l/128029.jpg",
 			title: "Kite Runner",
 			author: "Khaled Housseini",
 			description: `"The Kite Runner" by Khaled Hosseini is a poignant novel that explores the complex relationships, redemption, and the impact of personal and political turmoil on the lives of two childhood friends in Afghanistan."`,
@@ -21,18 +21,19 @@ const Home = () => {
 			index: "2",
 		},
 		{
-			image: "../../public/images/educated.jpg",
-			title: "Educated",
-			author: "Tara Westover",
-			description: `"Educated" by Tara Westover is a compelling memoir depicting the author's journey from growing up in a strict and abusive household in rural Idaho with no formal education to ultimately earning a PhD from Cambridge University.`,
+			image: "https://images.gr-assets.com/books/1361975680l/2657.jpg",
+			title: "To Kill a Mockingbird",
+			author: "Harper Lee",
+			description: `"To Kill a Mockingbird" by Harper Lee is a classic novel that addresses racial injustice in the American South through the eyes of Scout Finch, a young girl, as her father, lawyer Atticus Finch, defends a black man wrongly accused of rape.`,
 			price: "₹499",
 			index: "3",
 		},
 		{
-			image: "../../public/images/whatif.jpeg",
-			title: "What If?",
-			author: "Randall Munroe",
-			description: `"What If?: Serious Scientific Answers to Absurd Hypothetical Questions" by Randall Munroe is a whimsical exploration of bizarre and outlandish questions with scientifically rigorous and humorous answers, blending creativity and physics.`,
+			image: "https://images.gr-assets.com/books/1361039443l/41865.jpg",
+			title: "Twilight",
+			author: "Stephenie Meyer",
+			description: `
+			"Twilight" by Stephenie Meyer is a paranormal romance novel that revolves around the complicated love story between a teenage girl, Bella Swan, and a vampire, Edward Cullen, blending romance, fantasy, and suspense.`,
 			price: "₹320",
 			index: "4",
 		},
@@ -54,11 +55,15 @@ const Home = () => {
 				<ul>
 					{featuredBooks.map((featuredBook) => (
 						<li key={featuredBook.index} className="featuredListItems">
-							<Image src={featuredBook.image} alt="" />
+							<Image
+								src={featuredBook.image}
+								alt=""
+								width="250px"
+								height="400px"
+							/>
 							<h1>{featuredBook.title}</h1>
 							<h3>{featuredBook.author}</h3>
 							<p>{featuredBook.description}</p>
-							<button className="add-button">ADD TO CART</button>
 						</li>
 					))}
 				</ul>

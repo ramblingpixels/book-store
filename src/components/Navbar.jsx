@@ -21,11 +21,7 @@ const Navbar = () => {
 						Authors
 					</Link>
 					<Link to="/cart" className="nav-links">
-						<IconButton
-							aria-label="Show cart items"
-							color="inherit"
-							className="cart_icon"
-						>
+						<IconButton aria-label="Show cart items" className="cart_icon">
 							<Badge
 								overlap="rectangular"
 								// badgeContent={totalItems}

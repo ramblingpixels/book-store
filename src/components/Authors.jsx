@@ -6,15 +6,18 @@ const Authors = ({ data }) => {
 	return (
 		<div>
 			<Navbar />
-			<ul>
-				{data.map((book) => (
-					<li className="author-item">
-						<h4>
-							<Author key={book.id} name={book.authors} />
-						</h4>
-					</li>
-				))}
-			</ul>
+			<div className="authors-div">
+				<h1>Authors assoicated with Kluster Knowledge:</h1>
+				<ul className="authors-list">
+					{data.map((book) => (
+						<li className="author-item">
+							<h4>
+								<Author key={book.id} name={book.authors} />
+							</h4>
+						</li>
+					))}
+				</ul>
+			</div>
 		</div>
 	);
 };
