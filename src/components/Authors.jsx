@@ -12,7 +12,7 @@ const Authors = ({ data }) => {
 					{data.map((book) => (
 						<li className="author-item">
 							<h4>
-								<Author key={book.id} name={book.authors} />
+								<Author key={book.id} name={book.authors} id={book.id} />
 							</h4>
 						</li>
 					))}

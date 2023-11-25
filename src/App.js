@@ -43,10 +43,7 @@ function App() {
 						element={<Cart cart={cart} setCart={setCart} />}
 					/>
 					<Route path="/bookinfo/:id" element={<BookInfo data={books} />} />
-					<Route
-						path="/authorinfo/:name"
-						element={<AuthorInfo data={books} />}
-					/>
+					<Route path="/authorinfo/:id" element={<AuthorInfo data={books} />} />
 				</Routes>
 			</BrowserRouter>
 		</div>
