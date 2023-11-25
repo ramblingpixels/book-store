@@ -29,7 +29,7 @@ nav {
 }
 
 .navbar-d {
-	color: #3a3262;
+	color: #fff;
 }
 
 .nav-links {
@@ -51,7 +51,7 @@ nav {
 }
 
 .nav-links:visited {
-	color: #fff;
+	color: #3a3262;
 }
 
 .store_name {
@@ -107,12 +107,32 @@ nav {
 }
 
 .book-item {
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
+	text-align: center;
+	width: 70%;
+	padding: 50px;
+}
+
+.book-item h2 {
+	color: #3a3262;
+}
+.book-item button {
+	color: #3a3262;
+	border: none;
+	padding: 1% 2%;
+	border-radius: 5px;
+	cursor: pointer;
 }
 
 .book-item img {
+	height: 400px;
+	width: 250px;
+}
+
+.book-link {
+	text-decoration: none;
+	flex-direction: column;
+	align-items: baseline;
+	justify-content: center;
 	height: 400px;
 	width: 250px;
 }

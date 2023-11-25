@@ -1,36 +1,19 @@
-import React, { useState, useEffect } from "react";
-import Navbar from "./Navbar";
-import { API_URL } from "../API";
-import axios from "axios";
+import React from "react";
+import { Link } from "react-router-dom";
 
-const Book = () => {
-	const [books, setBooks] = useState([]);
-
-	useEffect(() => {
-		axios
-			.get(API_URL)
-			.then((res) => {
-				console.log(res.data);
-				setBooks(res.data);
-			})
-			.catch((err) => {
-				console.log(err);
-			});
-	}, []);
-
+const Book = ({ key, id, name, image_url }) => {
 	return (
 		<>
 			<div className="books-page">
-				<Navbar />
 				<div className="books-list">
-					{books.map((book) => (
-						<div className="book-item" key={book.id}>
-							<h2>{book.title}</h2>
-							<img src={book.image_url} alt="" />
-							<br />
-							<button>ADD TO CART</button>
-						</div>
-					))}
+					<div className="book-item" key={key}>
+						<h2>{name}</h2>
+						<img src={image_url} alt="" />
+						<br />
+						<Link to={`/bookinfo/${id}`}>Read more</Link>
+						<br />
+						<button>ADD TO CART</button>
+					</div>
 				</div>
 			</div>
 		</>
